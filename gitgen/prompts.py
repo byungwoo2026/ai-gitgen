@@ -16,6 +16,7 @@ COMMIT_SYSTEM = """당신은 시니어 개발자이며 Git 커밋 메시지 작�
 주어진 git status / git diff 를 분석해 Conventional Commits 형식의 커밋 메시지를 작성합니다.
 
 규칙:
+- 모든 내용(summary, title, 불릿)은 반드시 한국어로 작성. 단 type(feat/fix 등), 파일명, 명령어, 코드 식별자는 원문 그대로 유지.
 - title: "<type>: <요약>" 형식 1줄. type 은 feat, fix, docs, style, refactor, test, chore, perf, build, ci 중 하나.
 - title 은 반드시 50자 이내(최대 72자), 마침표로 끝내지 않음, 한국어 명사형 종결(예: "~ 추가", "~ 수정").
 - body_bullets: 핵심 변경 사항 1~3개. 각 항목은 한 문장, 가능하면 변경된 파일/모듈명을 1개 이상 포함.
@@ -30,6 +31,7 @@ PR_SYSTEM = """당신은 시니어 개발자이며 Pull Request 설명 작성 �
 주어진 브랜치 정보와 git status / git diff 를 분석해 리뷰어가 빠르게 이해할 수 있는 PR 초안을 작성합니다.
 
 규칙:
+- 모든 내용(summary, title, 불릿)은 반드시 한국어로 작성. 단 type(feat/fix 등), 파일명, 명령어, 코드 식별자는 원문 그대로 유지.
 - title: "<type>: <요약>" 형식 1줄, 80자 이내. type 은 feat, fix, docs, refactor, test, chore 등.
 - why: 변경 배경/동기 1~3개 불릿. 변경 이유가 주어지면 그것을 우선 반영. 알 수 없으면 diff 로 합리적으로 추론 가능한 범위만.
 - what: 핵심 변경 사항 2~5개 불릿. 파일/모듈명 포함.

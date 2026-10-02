@@ -20,14 +20,21 @@
 | 커밋 히스토리 | ![](screenshots/07_github_commits.png) |
 | 브랜치 작업 흐름 (feature 브랜치 → PR → main 병합) | ![](screenshots/08_github_pr.png) |
 
-브랜치 작업 흐름
+브랜치 작업 흐름 (실제 커밋 기록)
 
 ```
-main ──●(초기 구현)────────────────────●(PR 병합)
-        \                              /
-         feature/docs-submission ──●──
-                          (도구로 생성한 커밋 메시지로 커밋)
+main ──● 252936e feat: AI 기반 Git 커밋/PR 초안 자동 생성 CLI 초기 구현 ─────────────● (PR 병합)
+        \                                                                         /
+         feature/docs-update
+           ● 429aa69 docs: README 클론 URL 수정                ← 도구가 생성한 메시지 그대로 커밋
+           ● a715a49 docs: 커밋 메시지 생성 실행 화면 캡처 추가
+           ● ...     docs: 키 미설정/변경 없음 실행 화면 캡처 추가
+           ● ...     fix: 커밋/PR 프롬프트에 한국어 작성 규칙 추가   ← 도구 초안(docs:)을 검토 후 fix: 로 수정
+           ● ...     docs: README 실제 실행 결과 반영 및 PR 실행 화면 추가
 ```
+
+- 각 커밋 메시지는 `python main.py commit` 으로 생성한 초안을 검토해 적용했고, PR 본문은 `python main.py pr --base main` 초안을 다듬어 GitHub 에서 직접 작성했습니다 (도구는 원격 반영을 하지 않음 — 과제 제약 준수).
+- AI 초안 → 최종 변경점은 [README 5장 "AI 초안 → 최종 적용 시 다듬은 점"](../README.md) 참고.
 
 ## 결과물 3. 사용 가이드 문서
 
