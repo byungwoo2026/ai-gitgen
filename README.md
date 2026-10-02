@@ -44,7 +44,7 @@ ai-gitgen/
 
 ```powershell
 # (Windows PowerShell 기준)
-git clone https://github.com/<your-id>/ai-gitgen.git
+git clone https://github.com/byungwoo2026/ai-gitgen.git
 cd ai-gitgen
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
@@ -53,7 +53,7 @@ pip install -r requirements.txt
 
 ```bash
 # (macOS / Linux)
-git clone https://github.com/<your-id>/ai-gitgen.git
+git clone https://github.com/byungwoo2026/ai-gitgen.git
 cd ai-gitgen
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
